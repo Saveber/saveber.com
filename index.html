@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveber.com</title>
+    <title>Saveber Muhasebe Uygulaması</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +17,21 @@
             padding: 1em 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .nav-links {
+            position: absolute;
+            top: 50%;
+            right: 1em;
+            transform: translateY(-50%);
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
         }
         .container {
             padding: 2em;
@@ -56,7 +71,11 @@
 </head>
 <body>
     <header>
-        <h1>Saveber Muhasebe Uygulaması</h1>
+        <h1>Saveber.com</h1>
+        <div class="nav-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
     </header>
     <div class="container">
         <h2>Hoşgeldiniz</h2>
