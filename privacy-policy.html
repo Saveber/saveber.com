@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizmet Şartları - Saveber Muhasebe Uygulaması</title>
+    <title>Hizmet Şartları - Saveber</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +17,7 @@
             padding: 1em 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .nav-links {
             position: absolute;
@@ -31,6 +32,12 @@
         }
         .nav-links a:hover {
             text-decoration: underline;
+        }
+        .language-selector {
+            position: absolute;
+            top: 50%;
+            left: 1em;
+            transform: translateY(-50%);
         }
         .container {
             padding: 2em;
@@ -70,9 +77,15 @@
 </head>
 <body>
     <header>
-        <h1>Hizmet Şartları</h1>
+        <h1>Gizlilik Politikası</h1>
+        <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+                <option value="tr">Türkçe</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <div class="nav-links">
-            <a href="index.html">Home Page</a>
+            <a href="index.html">Ana Sayfa</a>
             <a href="terms-of-service.html">Terms of Service</a>
         </div>
     </header>

@@ -17,6 +17,7 @@
             padding: 1em 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .nav-links {
             position: absolute;
@@ -31,6 +32,12 @@
         }
         .nav-links a:hover {
             text-decoration: underline;
+        }
+        .language-selector {
+            position: absolute;
+            top: 50%;
+            left: 1em;
+            transform: translateY(-50%);
         }
         .container {
             padding: 2em;
@@ -71,9 +78,15 @@
 <body>
     <header>
         <h1>Hizmet Şartları</h1>
+        <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+                <option value="tr">Türkçe</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <div class="nav-links">
+            <a href="index.html">Ana Sayfa</a>
             <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="index.html">Home Page</a>
         </div>
     </header>
     <div class="container">
