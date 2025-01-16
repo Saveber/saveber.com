@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizmet Şartları - Saveber</title>
+    <title data-lang="tr" style="display: none;">Hizmet Şartları - Saveber</title>
+    <title data-lang="en">Terms of Services - Saveber</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,14 +75,27 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        function changeLanguage(lang) {
+            var elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function(element) {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Gizlilik Politikası</h1>
+        <h1 data-lang="tr" style="display: none;">Gizlilik Politikası</h1>
+        <h1 data-lang="en">Privacy Policy</h1>
         <div class="language-selector">
             <select onchange="changeLanguage(this.value)">
-                <option value="tr">Türkçe</option>
                 <option value="en">English</option>
+                <option value="tr">Türkçe</option>
             </select>
         </div>
         <div class="nav-links">
